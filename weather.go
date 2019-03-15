@@ -19,7 +19,7 @@ type WeatherMain struct {
 }
 
 func (w *Weather) TempString() string {
-	return w.Name + " " + strconv.Itoa(w.Main.Temp) + " °C"
+	return fmt.Sprintf("%s %s °C", w.Name, strconv.Itoa(w.Main.Temp))
 }
 
 var URL = "http://api.openweathermap.org/data/2.5/weather?q="
